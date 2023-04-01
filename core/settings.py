@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # local apps
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -118,7 +121,7 @@ TIME_ZONE = 'Africa/Nairobi'
 USE_I18N = True
 
 USE_TZ = True
-UTC
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -148,3 +151,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication'
     ]
 }
+
+# Points to the custom user model
+AUTH_USER_MODEL = 'users.CustomUser'
